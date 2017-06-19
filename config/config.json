@@ -1,7 +1,7 @@
 {
 	"webPort"	: "3000",
 	"dbHost"	: "localhost",
-	"dbUser"	: "test",
+	"dbUser"	: "ProjectUser",
 	"dbDatabase": "prog4databases",
 	"secretkey" : "Zet er zelf maar iets leuks neer"
 }

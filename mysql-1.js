@@ -2,7 +2,7 @@ var mysql = require('mysql');
 
 var connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'test',
+    user     : 'ProjectUser',
     password : process.env.DB_PASSWORD,
     database : 'prog4databases'
 });
