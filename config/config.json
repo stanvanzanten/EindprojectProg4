@@ -1,8 +1,8 @@
 {
 	"webPort"	: "3000",
-	"dbHost"	: "146.185.130.82",
-	"dbUser"	: "1021",
-	"dbDatabase": "1021",
-	"secretkey" : "Die is een hele lange secret key maat nu kan niemand bij mijn shit g"
+	"dbHost"	: "localhost",
+	"dbUser"	: "test",
+	"dbDatabase": "prog4databases",
+	"secretkey" : "Zet er zelf maar iets leuks neer"
 }
 
