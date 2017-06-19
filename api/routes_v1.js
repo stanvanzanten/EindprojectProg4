@@ -7,8 +7,8 @@ var db = require('../config/db');
 
 var mijnObject = { 
 	mijntekst: 'Hello World!',
-	label: "Nog meer tekst",
-	mijnarray: [ "tekst", "nog meer tekst", 2 ],
+	label: "Lekker inloggen met je eigen gegevens",
+	mijnarray: [ "Wel eerst registreren", "als dat gaat lukken...", 2 ],
 	mijnobject: {
 		mijnlabel: 'mijntekst',
 		getal: 4
