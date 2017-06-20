@@ -90,7 +90,8 @@ routes.post('/register', function(req, res){
                 });
             }
         }
-    });
+    });   
+});
 
 routes.get('/films', function(req, res){
 
