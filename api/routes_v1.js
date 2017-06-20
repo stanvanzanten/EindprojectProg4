@@ -27,11 +27,71 @@ routes.get('/goodbye', function(req, res){
 	res.json({ 'tekst': 'Goodbye!'});
 });
 
-routes.post('/register', function(req,res){
-    res.contentType('application/json');
-    res.status(200);
-    res.json({'tekst': 'Hallo Nino!'});
-});
+routes.post('/register', function(req, res){
+
+	console.dir(req.body);
+
+    var password = req.body.password;
+    var EncPass = CryptoJS.MD5(password);
+
+    //Create Date
+    var currentdate = new Date(); 
+    var datetime = currentdate.getFullYear() + "-"
+                + (currentdate.getMonth()+1) + "-"
+                + currentdate.getDate() + " "
+                + currentdate.getHours() + ":" 
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+    var timestamp = currentdate.getHours() + ":" 
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+    var email = req.body.email;
+
+    var customer = {
+        "first_name": req.body.first_name,
+        "last_name": req.body.last_name,
+        "email": email,
+        "password": EncPass,
+        "active": 1,
+        "create_date": datetime,
+        "last_update": datetime
+    }
+
+    db.query('SELECT * FROM customer WHERE email = ?',[email], function (error, results, fields) {
+        if (error) {
+            res.send({
+              "Code":400,
+              "Error":"An error has ocurred"
+            })
+        }else{
+            if(results.length > 0){
+                res.send({
+                    "Code":400,
+                    "Error":"Email is already known in out database, use another one"
+                })
+            }else{
+                //create account
+                db.query('INSERT INTO customer SET ?', customer, function (error, results, fields) {
+                    if (error) {
+                        console.log("error occurred",error);
+                        res.send({
+                            "code":400,
+                            "failed":"error occurred"
+                        })
+                    }else{
+                        console.log('The solution is: ', results);
+                        res.send({
+                            "code":200,
+                            "success":"User registered successfully"
+                        });
+                    }
+                });
+            }
+        }
+    });
+>>>>>>> 7376191af76229962ca140eb121ea7e7baae0985
 
 routes.get('/films', function(req, res){
 

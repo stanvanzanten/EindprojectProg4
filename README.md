@@ -1,3 +1,7 @@
+#Developers
+- Stan van Zanten
+- Ramon Pelkmans
+
 # node-msql
 Nodejs server, biedt API op de Sakila database.
 
