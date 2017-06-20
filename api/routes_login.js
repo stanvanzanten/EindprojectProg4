@@ -34,7 +34,7 @@ routes.post('/login', function(req, res){
                         res.status(200);
                         res.json({
                             "token" : auth.encodeToken(email),
-                            "username" : email
+                            "username" : emailss
                         });
                         console.log("ingelogt")
                         break;
@@ -42,7 +42,7 @@ routes.post('/login', function(req, res){
                         res.status(401).json({"error" : "e-mail of wachtwoord onjuist"});
                     }
                 }else{
-                    res.status(401).json({"error" : "e-mail of wachtwoord onjuist"});
+                    //res.status(401).json({"error" : "e-mail of wachtwoord onjuist"});
                 }
             }
 
