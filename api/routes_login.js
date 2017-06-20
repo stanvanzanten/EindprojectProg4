@@ -39,7 +39,7 @@ routes.post('/login', function(req, res){
                         console.log("ingelogt")
                         break;
                     }else{
-                        res.status(401).json({"error" : "e-mail of wachtwoord onjuist"});
+                        //res.status(401).json({"error" : "e-mail of wachtwoord onjuist"});
                     }
                 }else{
                     //res.status(401).json({"error" : "e-mail of wachtwoord onjuist"});
