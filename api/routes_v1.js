@@ -91,7 +91,6 @@ routes.post('/register', function(req, res){
             }
         }
     });
->>>>>>> 7376191af76229962ca140eb121ea7e7baae0985
 
 routes.get('/films', function(req, res){
 
