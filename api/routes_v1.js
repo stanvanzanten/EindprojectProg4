@@ -8,7 +8,7 @@ var db = require('../config/db');
 var mijnObject = { 
 	mijntekst: 'Hello World!',
 	label: "Lekker inloggen met je eigen gegevens",
-	mijnarray: [ "Wel eerst registreren", "als dat gaat lukken...", 2 ],
+	mijnarray: [ "Wel eerst registreren", "met je eigen wachtwoord", 2 ],
 	mijnobject: {
 		mijnlabel: 'mijntekst',
 		getal: 4
@@ -53,7 +53,7 @@ routes.post('/register', function(req, res){
         "first_name": req.body.first_name,
         "last_name": req.body.last_name,
         "email": email,
-        "password": process.env.DB_PASSWORD,
+        "password": req.body.password,
         "active": 1,
         "create_date": datetime,
         "last_update": datetime
