@@ -32,7 +32,7 @@ routes.post('/register', function(req, res){
 	console.dir(req.body);
 
     var password = req.body.password;
-    var EncPass = CryptoJS.MD5(password);
+    //var EncPass = CryptoJS.MD5(password);
 
     //Create Date
     var currentdate = new Date(); 
