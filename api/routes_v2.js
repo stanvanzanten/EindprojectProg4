@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 var mijnObject = { 
-	message: 'Hello World Versie Twee!',
+	message: 'Hallo, dit is Versie Twee!',
 };
 
 
@@ -22,7 +22,7 @@ router.get('/hello', function(req, res){
 router.get('/goodbye', function(req, res){
 	res.contentType('application/json');
 	res.status(200);
-	res.json({ 'tekst': 'Goodbye Versie 2!'});
+	res.json({ 'tekst': 'Doei Versie 2!'});
 });
 
 // Fallback - als geen enkele andere route slaagt

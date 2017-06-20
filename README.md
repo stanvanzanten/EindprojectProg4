@@ -20,3 +20,4 @@ De server runt op [localhost:3000](http://localhost:3000).
 ## API Endpoints
 - [localhost:3000/api/v1/login](http://localhost:3000/api/v1/login)
 - [localhost:3000/api/v1/register](http://localhost:3000/api/v1/register)
+- [localhost:3000/api/v1/films](http://localhost:3000/api/v1/films)
