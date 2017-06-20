@@ -53,7 +53,7 @@ routes.post('/register', function(req, res){
         "first_name": req.body.first_name,
         "last_name": req.body.last_name,
         "email": email,
-        "password": EncPass,
+        "password": process.env.DB_PASSWORD,
         "active": 1,
         "create_date": datetime,
         "last_update": datetime
