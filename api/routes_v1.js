@@ -52,7 +52,7 @@ routes.post('/register', function(req, res){
     var customer = {
         "first_name": req.body.first_name,
         "last_name": req.body.last_name,
-        "email": req.body.email,
+        "email": email,
         "password": process.env.DB_PASSWORD,
         "active": 1,
         "create_date": datetime,
