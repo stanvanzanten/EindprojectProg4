@@ -34,7 +34,7 @@ routes.post('/login', function(req, res){
                         res.status(200);
                         res.json({
                             "token" : auth.encodeToken(email),
-                            "username" : emailss
+                            "username" : email
                         });
                         console.log("ingelogt")
                         break;
