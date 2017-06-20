@@ -28,7 +28,7 @@ routes.get('/goodbye', function(req, res){
 });
 
 routes.get('/register', function(req,res){
-    res.contentType(application);
+    res.contentType('application/json');
     res.status(200);
     res.json({'tekst': 'Hallo Nino!'});
 });
