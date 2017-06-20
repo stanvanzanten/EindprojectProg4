@@ -61,6 +61,7 @@ routes.post('/register', function(req, res){
 
     db.query('SELECT * FROM customer WHERE email = ?',[email], function (error, results, fields) {
         if (error) {
+            console.log(error);
             res.send({
               "Code":400,
               "Error":"An error has ocurred"
