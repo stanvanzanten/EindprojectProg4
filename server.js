@@ -22,7 +22,7 @@ app.use(expressJWT({
 }).unless({
     path: [
         { url: '/api/v1/login', methods: ['POST'] },
-        { url: '/api/v1/register', methods: ['GET'] },
+        { url: '/api/v1/register', methods: ['POST'] },
         { url: '/api/v1/hello', methods: ['GET']}
     ]
 }));
