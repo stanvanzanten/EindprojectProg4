@@ -27,6 +27,11 @@ routes.get('/goodbye', function(req, res){
 	res.json({ 'tekst': 'Goodbye!'});
 });
 
+routes.get('register', function(req,res){
+    res.contentType(application);
+    res.status(200);
+    res.json({'tekst': 'Hallo Nino!'});
+});
 
 routes.get('/films', function(req, res){
 
