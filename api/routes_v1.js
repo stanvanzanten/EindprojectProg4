@@ -27,7 +27,7 @@ routes.get('/goodbye', function(req, res){
 	res.json({ 'tekst': 'Goodbye!'});
 });
 
-routes.get('/register', function(req,res){
+routes.post('/register', function(req,res){
     res.contentType('application/json');
     res.status(200);
     res.json({'tekst': 'Hallo Nino!'});
