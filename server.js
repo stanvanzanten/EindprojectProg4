@@ -24,7 +24,7 @@ app.use(expressJWT({
         { url: '/api/v1/login', methods: ['POST'] },
         { url: '/api/v1/register', methods: ['POST'] },
         { url: '/api/v1/hello', methods: ['GET']},
-        { url: 'api/v1/films', methods: ['GET']}
+        { url: '/api/v1/films', methods: ['GET']}
     ]
 }));
 
